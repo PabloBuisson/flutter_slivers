@@ -5,7 +5,7 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
 ## :rocket: Objectifs du projet
 
 * Découvrir les possibilités des Slivers
-* Implémenter un ListWheelScrollView
+* Implémenter une ListWheelScrollView
 
 ## :dart: Présentation du projet
 
@@ -17,6 +17,8 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
    * SliverGrid
    * SliverToBoxAdapter
    * SliverFillRemaining
+* Ressources :   
+   * Example Layouts with Slivers in Flutter : https://github.com/bizz84/slivers_demo_flutter
 
 ## :package: Packages
 
