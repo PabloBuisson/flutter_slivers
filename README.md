@@ -5,7 +5,7 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
 ## :rocket: Objectifs du projet
 
 * Découvrir les possibilités des Slivers
-* Implémenter un ListWheelScrollView
+* Implémenter une ListWheelScrollView
 
 ## :dart: Présentation du projet
 

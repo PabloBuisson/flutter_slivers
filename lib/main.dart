@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo about Slivers',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: Colors.white,
       ),
       routes: {
         CustomSliverAppBar.id: (context) => CustomSliverAppBar(),

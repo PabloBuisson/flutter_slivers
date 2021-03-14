@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   ];
   // index of the item of the ListWheelScrollView
   // that is currently in the center of the wheel
-  int indexScreen;
+  int indexScreen = 0;
 
   void goToSliverScreen() {
     if (indexScreen != null) {
