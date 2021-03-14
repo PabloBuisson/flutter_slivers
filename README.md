@@ -6,6 +6,7 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
 
 * Découvrir les possibilités des Slivers
 * Implémenter une ListWheelScrollView
+* Ajouter des GIFs au README
 
 ## :dart: Présentation du projet
 
