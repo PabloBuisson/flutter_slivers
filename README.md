@@ -17,6 +17,8 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
    * SliverGrid
    * SliverToBoxAdapter
    * SliverFillRemaining
+* Ressources :   
+   * Example Layouts with Slivers in Flutter : https://github.com/bizz84/slivers_demo_flutter
 
 ## :package: Packages
 

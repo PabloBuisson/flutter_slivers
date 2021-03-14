@@ -21,12 +21,12 @@ class CustomSliverAppBar extends StatelessWidget {
             ],
             // pinned: true, // pinned to the top, like a regular appBar
             floating: true, // become visible when the user scroll UP
-            // false => visible when the user scrolls to the TOP
+            // floating: false => only visible when the user scrolls to the TOP
             // snap: true,
             // stretch: true,
-            expandedHeight: 150.0, // maxHeight
+            expandedHeight: 150.0, // maxHeight (when appBar is on TOP)
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('Basic Slivers'), // only visible on TOP
+              title: Text('Sliver AppBar'), // only visible on TOP
               centerTitle: true,
             ),
           ),
@@ -37,7 +37,7 @@ class CustomSliverAppBar extends StatelessWidget {
                   height: 50,
                   alignment: Alignment.center,
                   color: Colors.orange[100 * (index % 9)],
-                  child: Text('orange $index'),
+                  child: Text('item $index'),
                 );
               },
               childCount: 15,
