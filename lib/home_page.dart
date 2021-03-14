@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
         child: ListWheelScrollView.useDelegate(
           itemExtent: 100.0, // pixel height of each child
           diameterRatio: 1.5, // diameter of the wheel
-          useMagnifier:
-          true, // define whether to use magnifier at the centre item of our wheel
+          magnification: 1.1, // loop effect on item at the center
+          useMagnifier: true, // define whether to use magnifier at the centre item of our wheel
           onSelectedItemChanged: (index) {
             setState(() {
               indexScreen = index;
@@ -48,15 +48,18 @@ class _HomePageState extends State<HomePage> {
               return Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.circular(10),
+                  color: Theme.of(context).primaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(30),
                 ),
                 padding: const EdgeInsets.all(10),
-                child: Text(
-                  sliversScreens[index].nameScreen,
-                  textScaleFactor: 1.3,
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                child: Center(
+                  child: Text(
+                    sliversScreens[index].nameScreen,
+                    textScaleFactor: 1.4,
+                    style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               );
             },
