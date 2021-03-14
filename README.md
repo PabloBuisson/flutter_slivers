@@ -1,16 +1,27 @@
-# flutterslivers
+# :level_slider: Flutter Slivers Overview
 
-Flutter Slivers Overview
+Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
 
-## Getting Started
+## :rocket: Objectifs du projet
 
-This project is a starting point for a Flutter application.
+* Découvrir les possibilités des Slivers
 
-A few resources to get you started if this is your first Flutter project:
+## :dart: Présentation du projet
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* Les Slivers sont des morceaux (*sliver* en anglais) d'une zone scrollable.
+* Ils se déclinent en différents widgets selon leur utilité :   
+   * SliverAppBar
+   * SliverPersistentHeader
+   * SliverList
+   * SliverGrid
+   * SliverToBoxAdapter
+   * SliverFillRemaining
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## :package: Packages
+
+* Pas de packages pour ce projet
+
+## :pushpin: Versions
+
+* Flutter 2.0.2
+* Dart 2.12.1
