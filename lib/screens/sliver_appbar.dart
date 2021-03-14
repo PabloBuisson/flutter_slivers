@@ -22,7 +22,7 @@ class CustomSliverAppBar extends StatelessWidget {
             // pinned: true, // pinned to the top, like a regular appBar
             floating: true, // become visible when the user scrolls UP
             // floating: false // only visible when the user scrolls to the TOP
-            // snap: true,
+            // snap: true, // if floating: true, will animate the appBar by expanding height to max
             // stretch: true,
             expandedHeight: 150.0, // maxHeight (when appBar is on TOP)
             flexibleSpace: FlexibleSpaceBar(

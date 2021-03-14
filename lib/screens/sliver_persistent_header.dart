@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterslivers/widgets/delegate_persistent_header.dart';
 
-class CustomSliverPersistentHeader extends StatefulWidget {
+class CustomSliverPersistentHeader extends StatelessWidget {
   static final String id = 'sliver_persistent_header';
   static final String name = 'SliverPersistentHeader';
 
@@ -8,14 +9,21 @@ class CustomSliverPersistentHeader extends StatefulWidget {
   get nameScreen => CustomSliverPersistentHeader.name;
 
   @override
-  _CustomSliverPersistentHeaderState createState() => _CustomSliverPersistentHeaderState();
-}
-
-class _CustomSliverPersistentHeaderState extends State<CustomSliverPersistentHeader> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sliver PersistentHeader"),),
+      body: CustomScrollView(
+        slivers: [
+          /// Under the hood, SliverAppBar is a SliverPersistentHeader
+          SliverPersistentHeader(
+              pinned: false,
+              floating: true,
+              delegate:
+                  DelegatePersistentHeader(minExtent: 150.0, maxExtent: 250.0)),
+          SliverFillRemaining(
+            child: Container(),
+          ),
+        ],
+      ),
     );
   }
 }

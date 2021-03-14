@@ -20,6 +20,8 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
    * SliverFillRemaining
 * Ressources :   
    * Example Layouts with Slivers in Flutter : https://github.com/bizz84/slivers_demo_flutter
+   * Slivers in Flutter: Getting Started : https://www.raywenderlich.com/19539821-slivers-in-flutter-getting-started
+   * SliverAppBar class : https://api.flutter.dev/flutter/material/SliverAppBar-class.html
 
 ## :package: Packages
 
