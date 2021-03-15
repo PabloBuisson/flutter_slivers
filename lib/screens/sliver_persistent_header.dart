@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterslivers/widgets/delegate_persistent_header.dart';
+import 'package:flutterslivers/widgets/delegate_header.dart';
+import 'package:flutterslivers/widgets/sliver_sub_header.dart';
 
 class CustomSliverPersistentHeader extends StatelessWidget {
   static final String id = 'sliver_persistent_header';
@@ -13,12 +14,15 @@ class CustomSliverPersistentHeader extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          /// Under the hood, SliverAppBar is a SliverPersistentHeader
+          // Under the hood, SliverAppBar is a SliverPersistentHeader
+          // Normal SliverPersistentHeader, with delegate
           SliverPersistentHeader(
               pinned: true,
-              floating: true,
+              floating: false,
               delegate:
-                  DelegatePersistentHeader(minExtent: 100.0, maxExtent: 250.0)),
+                  DelegateHeader(minExtent: 30.0, maxExtent: 250.0)),
+          // Custom SliverPersistentHeader
+          SliverSubHeader(text: 'SliverSubPersistentHeader', backgroundColor: Colors.black),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
@@ -33,17 +37,25 @@ class CustomSliverPersistentHeader extends StatelessWidget {
             ),
           ),
 
-          /// lets you scroll the CustomScrollView freely in the vertical axis
-          /// as you fill the space with an empty container
+          // lets you scroll the CustomScrollView freely in the vertical axis
+          // as you fill the space with an empty container
           SliverFillRemaining(
             child: Container(
               color: Colors.teal,
-              child: Center(
-                child: Text(
-                  'I fill the remaining space !',
-                  textScaleFactor: 1.3,
-                  style: TextStyle(color: Colors.white),
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'SliverFillRemaining',
+                    textScaleFactor: 1.3,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    'I fill the remaining space !',
+                    textScaleFactor: 1.3,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
               ),
             ),
           ),
