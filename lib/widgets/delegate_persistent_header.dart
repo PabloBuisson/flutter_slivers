@@ -13,6 +13,8 @@ class DelegatePersistentHeader implements SliverPersistentHeaderDelegate {
   // maxWidth of the header (shown by default)
   final double maxExtent; // property to override
 
+  // shrinkOffset = distance from maxExtent towards minExtent
+  // the current amount by which the sliver has been shrunk
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -27,7 +29,7 @@ class DelegatePersistentHeader implements SliverPersistentHeaderDelegate {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [Colors.transparent, Colors.black54],
-              stops: [0.5, 1.0],
+              stops: [0.0, 0.8],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               tileMode: TileMode.repeated,
@@ -46,26 +48,25 @@ class DelegatePersistentHeader implements SliverPersistentHeaderDelegate {
                       icon: Icon(
                         Icons.arrow_back,
                         color: Colors.white
-                            .withOpacity(titleOpacity(shrinkOffset)),
+                            .withOpacity(titleOpacity(-shrinkOffset)),
                       ),
                       onPressed: () => Navigator.pop(context)),
+                  Text(
+                    'Sliver PersistentHeader',
+                    textScaleFactor: 1.5,
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(titleOpacity(shrinkOffset)),
+                    ),
+                  ),
                   IconButton(
                       icon: Icon(
                         Icons.menu,
                         color: Colors.white
-                            .withOpacity(titleOpacity(shrinkOffset)),
+                            .withOpacity(titleOpacity(-shrinkOffset)),
                       ),
                       onPressed: () {}),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              ),
-              SizedBox(height: 120.0,),
-              Text(
-                'Sliver PersistentHeader',
-                textScaleFactor: 1.5,
-                style: TextStyle(
-                  color: Colors.white.withOpacity(titleOpacity(shrinkOffset)),
-                ),
               ),
             ],
           ),
@@ -83,7 +84,8 @@ class DelegatePersistentHeader implements SliverPersistentHeaderDelegate {
 
   @override
   bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
-    return true;
+    return maxExtent != oldDelegate.maxExtent ||
+        minExtent != oldDelegate.minExtent;
   }
 
   @override
