@@ -17,6 +17,7 @@ class CustomSliverGrid extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverGrid(
+            // builds the children
             delegate: SliverChildBuilderDelegate(
               (context, index) {
                 return Container(
@@ -27,13 +28,17 @@ class CustomSliverGrid extends StatelessWidget {
               },
               childCount: 30,
             ),
-            // specify how the items are displayed
+            // specify how the items are displayed (grid’s layout)
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, // 3 columns
               mainAxisSpacing: 15, // space between rows
               crossAxisSpacing: 15, // space between columns
               childAspectRatio: 2.0,
             ),
+          ),
+          // Padding widget doesn’t take slivers
+          SliverPadding(
+            padding: const EdgeInsets.only(top: 20.0),
           ),
           SliverGrid(
             delegate: SliverChildBuilderDelegate(
@@ -54,6 +59,13 @@ class CustomSliverGrid extends StatelessWidget {
             ),
           ),
           // define explicit list of widgets, not on demand
+          // display the children depending on a fixed number of cross-axis tiles
+          // (!) SliverGrid.count isn’t the most efficient way to render a SliverGrid,
+          // as it requires building the widget list in advance.
+          // Using the default SliverGrid constructor is considered more efficient.
+          SliverPadding(
+            padding: const EdgeInsets.only(top: 20.0),
+          ),
           SliverGrid.count(
             crossAxisCount: 3,
             mainAxisSpacing: 10.0,
@@ -69,6 +81,10 @@ class CustomSliverGrid extends StatelessWidget {
             ],
           ),
           // define explicit list of widgets, not on demand
+          // similar to SliverFixedExtentList
+          SliverPadding(
+            padding: const EdgeInsets.only(top: 20.0),
+          ),
           SliverGrid.extent(
             maxCrossAxisExtent: 200,
             mainAxisSpacing: 10.0,
