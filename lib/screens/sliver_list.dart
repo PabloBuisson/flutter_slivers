@@ -27,9 +27,21 @@ class CustomSliverList extends StatelessWidget {
             // (!) SliverChildListDelegate requires building all the widgets in advance
             // which isn’t efficient and reduces the benefit of building children lazily
             delegate: SliverChildListDelegate([
-              Container(color: Colors.red[400]),
-              Container(color: Colors.red[300]),
-              Container(color: Colors.red[200]),
+              Container(
+                color: Colors.red[400],
+                alignment: Alignment.center,
+                child: Text('red 4'),
+              ),
+              Container(
+                color: Colors.red[300],
+                alignment: Alignment.center,
+                child: Text('red 3'),
+              ),
+              Container(
+                color: Colors.red[200],
+                alignment: Alignment.center,
+                child: Text('red 2'),
+              ),
             ]),
           ),
           // define explicit list of widgets
