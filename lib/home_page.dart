@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/sliver_appbar.dart';
+import 'screens/sliver_grid.dart';
 import 'screens/sliver_list.dart';
 import 'screens/sliver_persistent_header.dart';
 
@@ -15,6 +16,7 @@ class _HomePageState extends State<HomePage> {
     CustomSliverAppBar(),
     CustomSliverPersistentHeader(),
     CustomSliverList(),
+    CustomSliverGrid(),
   ];
   // index of the item of the ListWheelScrollView
   // that is currently in the center of the wheel
