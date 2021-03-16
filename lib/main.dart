@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 import 'screens/sliver_appbar.dart';
+import 'screens/sliver_list.dart';
 import 'screens/sliver_persistent_header.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         CustomSliverAppBar.id: (context) => CustomSliverAppBar(),
         CustomSliverPersistentHeader.id: (context) =>
             CustomSliverPersistentHeader(),
+        CustomSliverList.id: (context) => CustomSliverList(),
       },
       home: HomePage(),
     );

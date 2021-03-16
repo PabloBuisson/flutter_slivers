@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/sliver_appbar.dart';
+import 'screens/sliver_list.dart';
 import 'screens/sliver_persistent_header.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,9 +11,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // list of our slivers to explore
-  final List sliversScreens = [
+  List sliversScreens = [
     CustomSliverAppBar(),
     CustomSliverPersistentHeader(),
+    CustomSliverList(),
   ];
   // index of the item of the ListWheelScrollView
   // that is currently in the center of the wheel
@@ -35,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         child: ListWheelScrollView.useDelegate(
           itemExtent: 100.0, // pixel height of each child
           diameterRatio: 1.5, // diameter of the wheel
-          magnification: 1.1, // loop effect on item at the center
+          // magnification: 1.1, // loop effect on item at the center
           useMagnifier: true, // define whether to use magnifier at the centre item of our wheel
           onSelectedItemChanged: (index) {
             setState(() {
