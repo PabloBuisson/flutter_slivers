@@ -4,6 +4,7 @@ import 'screens/sliver_appbar.dart';
 import 'screens/sliver_grid.dart';
 import 'screens/sliver_list.dart';
 import 'screens/sliver_persistent_header.dart';
+import 'screens/sliver_to_box_adapter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
     CustomSliverPersistentHeader(),
     CustomSliverList(),
     CustomSliverGrid(),
+    CustomSliverToBoxAdapter(),
   ];
   // index of the item of the ListWheelScrollView
   // that is currently in the center of the wheel
