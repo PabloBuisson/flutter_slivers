@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterslivers/screens/sliver_fill_remaining.dart';
 import 'package:flutterslivers/screens/sliver_grid.dart';
 import 'package:flutterslivers/screens/sliver_to_box_adapter.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         CustomSliverList.id: (context) => CustomSliverList(),
         CustomSliverGrid.id: (context) => CustomSliverGrid(),
         CustomSliverToBoxAdapter.id: (context) => CustomSliverToBoxAdapter(),
+        CustomSliverFillRemaining.id: (context) => CustomSliverFillRemaining(),
       },
       home: HomePage(),
     );
