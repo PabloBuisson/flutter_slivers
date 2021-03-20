@@ -29,7 +29,7 @@ Une démonstration sur l'étendue des possibilités des Slivers avec Flutter.
 
 SliverAppBar
 -------------
-<img width="350" alt="SliverAppBar demo" src="https://user-images.githubusercontent.com/41048008/111867775-7f4f9400-8976-11eb-8faa-5f8dd574476b.gif"> | 
+<img width="350" alt="SliverAppBar demo" src="https://user-images.githubusercontent.com/41048008/111867775-7f4f9400-8976-11eb-8faa-5f8dd574476b.gif">
 
 SliverPersistentHeader
 -------------
